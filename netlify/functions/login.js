@@ -9,7 +9,9 @@ exports.handler = async (req, res) => {
   const { email, issuer } = await magic.users.getMetadataByToken(didToken)
 
   /* Get or create a user's entity in FaunaDB */
-  const adminClient = getClient(process.env.FAUNADB_SECRET_KEY);
+  const adminClient = new faunadb.Client({
+    secret: process.env.FAUNADB_SECRET_KEY
+  });
   const q = faunadb.query;
   const user_id = adminClient.query(
     q.Paginate(
