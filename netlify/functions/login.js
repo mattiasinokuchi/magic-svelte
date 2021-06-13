@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
     secret: process.env.FAUNADB_SECRET_KEY
   });
   const q = faunadb.query;
-  const user_id = adminClient.query(
+  const user_id = await adminClient.query(
     q.Paginate(
       q.Match(
         q.Index('users_by_email'),
