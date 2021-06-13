@@ -4,7 +4,7 @@ const faunadb = require('faunadb');
 exports.handler = async (event, context) => {
   /* Validate the user's DID token */
   const magic = new Magic(process.env.MAGIC_SECRET_KEY);
-  const didToken = magic.utils.parseAuthorizationHeader(req.headers.authorization);
+  const didToken = magic.utils.parseAuthorizationHeader(event.headers.authorization);
   magic.token.validate(didToken);
   const { email, issuer } = await magic.users.getMetadataByToken(didToken)
 
