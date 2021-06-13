@@ -21,9 +21,9 @@ exports.handler = async (event, context) => {
       )
     )
   );
-  console.log(user_id);
+  console.log(user_id.data);
   return {
     statusCode: 200,
-    body: JSON.stringify(user_id)
+    body: JSON.stringify(user_id.data)
   }
 }
