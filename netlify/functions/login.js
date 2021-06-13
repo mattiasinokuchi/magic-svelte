@@ -1,7 +1,7 @@
 const { Magic } = require('@magic-sdk/admin');
 const faunadb = require('faunadb');
 
-exports.handler = async (req, res) => {
+exports.handler = async (event, context) => {
   /* Validate the user's DID token */
   const magic = new Magic(process.env.MAGIC_SECRET_KEY);
   const didToken = magic.utils.parseAuthorizationHeader(req.headers.authorization);
@@ -22,5 +22,8 @@ exports.handler = async (req, res) => {
     )
   );
   console.log(user_id);
-  res.json({ email: email });
+  return {
+    statusCode: 200,
+    body: JSON.stringify(user_id)
+  }
 }
