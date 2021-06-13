@@ -1,5 +1,6 @@
 {
   "name": "svelte-app",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "rollup -c",
