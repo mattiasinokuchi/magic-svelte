@@ -1,5 +1,5 @@
-import { Magic } from '@magic-sdk/admin';
-import faunadb from 'faunadb';
+const { Magic } = require('@magic-sdk/admin');
+const faunadb = require('faunadb');
 
 exports.handler = async (event, context) => {
   /* Validate the user's DID token */
