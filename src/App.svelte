@@ -31,7 +31,7 @@
       }
     });
     let object = await response.json();
-    message = "Logged in as " + object.email;
+    message = "Logged in as " + object;
     userLoggedIn = true;
   }
 
