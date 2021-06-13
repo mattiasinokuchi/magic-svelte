@@ -23,7 +23,7 @@
     /* Generate DID token with Magic */
     const didToken = await m.auth.loginWithMagicLink({ email: user });
     /* Validate DID token */
-    const response = await fetch("/api/login", {
+    const response = await fetch("/.netlify/functions/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
