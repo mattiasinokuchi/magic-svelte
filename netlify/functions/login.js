@@ -1,7 +1,7 @@
 const { Magic } = require('@magic-sdk/admin');
 const faunadb = require('faunadb');
 
-exports.handler = async (event, context) => {
+exports.handler = async (req, res) => {
   /* Validate the user's DID token */
   const magic = new Magic(process.env.MAGIC_SECRET_KEY);
   const didToken = magic.utils.parseAuthorizationHeader(req.headers.authorization);
