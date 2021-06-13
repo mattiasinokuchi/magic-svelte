@@ -1,55 +1,55 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { Magic } from "magic-sdk";
   import { onMount } from "svelte";
-  let showText;
+
+  let message = "Just a moment...";
+  let user;
+  let userLoggedIn;
+  const m = new Magic("pk_live_B052D18BE29678DC");
 
   onMount(async () => {
-    await delay(1000);
-    showText = "Hello serverless function!";
-    await delay(2000);
-    showText = false;
-    let response = await fetch("/.netlify/functions/hello");
-    let object = await response.json();
-    showText = object.greeting;
-    await delay(2000);
-    showText = false;
-    await delay(1000);
-    showText = "Where are you?";
-    await delay(1000);
-    showText = false;
-    await delay(1000);
-    response = await fetch("/.netlify/functions/place");
-    object = await response.json();
-    showText = object.answer;
+    try {
+      const { email } = await m.user.getMetadata();
+      user = email;
+      userLoggedIn = true;
+      message = "Welcome " + user;
+    } catch {
+      userLoggedIn = false;
+      message = "Welcome to my Magic Link demo!";
+    }
   });
 
-  function delay(delayInms) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(2);
-      }, delayInms);
+  async function logIn() {
+    /* Generate DID token with Magic */
+    const didToken = await m.auth.loginWithMagicLink({ email: user });
+    /* Validate DID token */
+    const response = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${didToken}`,
+      }
     });
+    let object = await response.json();
+    message = "Logged in as " + object.email;
+    userLoggedIn = true;
+  }
+
+  async function logOut() {
+    await m.user.logout();
+    message = user + " logged out";
+    user = null;
+    userLoggedIn = false;
   }
 </script>
 
 <main>
-  <p>
-    This is a
-    <a href="https://svelte.dev/">Svelte</a>
-    app deployed with
-    <a
-      href="https://www.netlify.com/"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      Netlify
-    </a>
-    which contains two serverless
-    <a href="https://nodejs.org/en/">Node.js</a>
-    functions.
-  </p>
-  <br />
-  {#if showText}
-    <h2 transition:fade>{showText}</h2>
+  <h2>{message}</h2>
+  {#if !userLoggedIn}
+    <input type="email" bind:value={user} placeholder="name@domain.tld" />
+    <button on:click={logIn}>Log in</button>
+  {/if}
+  {#if userLoggedIn}
+    <button on:click={logOut}>Log out</button>
   {/if}
 </main>
