@@ -11,8 +11,7 @@
     try {
       const { email } = await m.user.getMetadata();
       user = email;
-      userLoggedIn = true;
-      message = "Welcome " + user;
+      logIn();
     } catch {
       userLoggedIn = false;
       message = "Welcome to my Magic Link demo!";
@@ -46,7 +45,7 @@
 
 <main>
   <h2>{message}</h2>
-  {#if !userLoggedIn}
+  {#if !userLoggedIn && message !== 'Just a moment...'}
     <input type="email" bind:value={user} placeholder="name@domain.tld" />
     <button on:click={logIn}>Log in</button>
   {/if}
