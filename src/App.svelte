@@ -1,6 +1,7 @@
 <script>
   import { Magic } from "magic-sdk";
   import { onMount } from "svelte";
+  import { todos } from "./stores";
 
   let message = "Just a moment...";
   let user;
@@ -29,9 +30,9 @@
         Authorization: `Bearer ${didToken}`,
       }
     });
-    let object = await response.json();
+    $todos = await response.json();
     message = "Logged in as " + user;
-    console.log(object.data[0].data.user);
+    console.log('$todos: ', $todos);
     userLoggedIn = true;
   }
 
