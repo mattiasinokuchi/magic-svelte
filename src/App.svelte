@@ -47,7 +47,7 @@
 <main>
   <h2>{message}</h2>
   {#if !userLoggedIn && message !== 'Just a moment...'}
-    <input type="email" bind:value={user} placeholder="name@domain.tld" />
+    <input type="email" bind:value={user} placeholder="hello@magic.link" />
     <button on:click={logIn}>Log in</button>
   {/if}
   {#if userLoggedIn}
