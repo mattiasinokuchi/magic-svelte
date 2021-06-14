@@ -28,11 +28,11 @@
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${didToken}`,
-      }
+      },
     });
     $todos = await response.json();
     message = "Logged in as " + user;
-    console.log('$todos: ', $todos);
+    console.log("$todos: ", $todos);
     userLoggedIn = true;
   }
 
@@ -44,13 +44,21 @@
   }
 </script>
 
-<main>
-  <h2>{message}</h2>
-  {#if !userLoggedIn && message !== 'Just a moment...'}
+<header>
+  <p>{message}</p>
+  {#if !userLoggedIn && message !== "Just a moment..."}
     <input type="email" bind:value={user} placeholder="hello@magic.link" />
     <button on:click={logIn}>Log in</button>
   {/if}
   {#if userLoggedIn}
     <button on:click={logOut}>Log out</button>
   {/if}
-</main>
+</header>
+
+<style>
+  header {
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+      "Arial", sans-serif;
+    text-align: center;
+  }
+</style>
