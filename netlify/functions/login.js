@@ -12,42 +12,21 @@ exports.handler = async (event, context) => {
     secret: process.env.FAUNADB_SECRET_KEY
   });
   const q = faunadb.query;
-  /* ...searches for user in FaunaDB... */
-  const user_id = await adminClient.query(
-    q.Paginate(
-      q.Match(
-        q.Index('users_by_email'),
-        email
+  /* ...get todos for the user from FaunaDB... */
+  const todos = await adminClient.query(
+    q.Map(
+      q.Paginate(
+        q.Match(
+          q.Index('todos_by_user'),
+          email
+        )
+      ),
+      q.Lambda('userRef', q.Get(q.Var('userRef'))
       )
     )
   );
-  if (user_id.data.length === 0) {
-    /* ...creates a user in FaunaDB and returns an empty array if missing... */
-    await adminClient.query(
-      q.Create(
-        q.Collection("users"),
-        {
-          data: { email }
-        }
-      )
-    )
-    return {
-      statusCode: 200,
-      body: JSON.stringify(user_id.data)
-    }
-  } else {
-    /* ...or searches and returns with documents of the user from FaunaDB... */
-    q.Map(
-      q.Paginate(q.Match(q.Index('all_todos'))),
-      q.Lambda('todo_ref', {
-        id: q.Select(['ref', 'id'], q.Get(q.Var('todo_ref'))),
-        title: q.Select(['data', 'title'], q.Get(q.Var('todo_ref'))),
-        completed: q.Select(['data', 'completed'], q.Get(q.Var('todo_ref'))),
-      })
-    )
-    return {
-      statusCode: 200,
-      body: JSON.stringify(user_id.data.length)
-    }
+  return {
+    statusCode: 200,
+    body: JSON.stringify(todos)
   }
 }
