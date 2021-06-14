@@ -2,7 +2,7 @@ const { Magic } = require('@magic-sdk/admin');
 const faunadb = require('faunadb');
 
 exports.handler = async (event, context) => {
-  /* Validates the user's DID token... */
+  /* Validates user's DID token... */
   const magic = new Magic(process.env.MAGIC_SECRET_KEY);
   const didToken = magic.utils.parseAuthorizationHeader(event.headers.authorization);
   magic.token.validate(didToken);
@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     secret: process.env.FAUNADB_SECRET_KEY
   });
   const q = faunadb.query;
-  /* ...get todos for the user from FaunaDB... */
+  /* ...get todos for user from FaunaDB... */
   const todos = await adminClient.query(
     q.Map(
       q.Paginate(

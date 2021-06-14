@@ -20,10 +20,10 @@
   });
 
   async function logIn() {
-    /* Generate DID token with Magic */
+    /* Generate token with Magic... */
     const didToken = await m.auth.loginWithMagicLink({ email: user });
-    /* Validate DID token */
-    const response = await fetch("/.netlify/functions/login", {
+    /* ...read todos... */
+    const response = await fetch("/.netlify/functions/read", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
