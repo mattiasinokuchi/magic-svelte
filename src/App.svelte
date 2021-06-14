@@ -60,5 +60,9 @@
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
       "Arial", sans-serif;
     text-align: center;
+    display: flex;
+  }
+  p, button {
+    margin: 1vh;
   }
 </style>
