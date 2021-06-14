@@ -31,8 +31,8 @@
       }
     });
     let object = await response.json();
-    message = "Logged in as " + object;
-    console.log(object);
+    message = "Logged in as " + user;
+    console.log(object.data[0].data.user);
     userLoggedIn = true;
   }
 
