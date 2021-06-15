@@ -5,6 +5,7 @@
 .env.local
 .env.build
 .vercel
+.vscode
 package-lock.json
 yarn.lock
 # Local Netlify folder
