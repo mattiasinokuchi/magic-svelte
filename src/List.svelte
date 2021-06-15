@@ -7,11 +7,12 @@
                 fetch("/.netlify/functions/update", {
                     method: "POST",
                     body: JSON.stringify({
-                        id: $todos[num - 1]["ref"]["@ref"]["id"],
-                        data: $todos[num - 1]["data"]["name"],
+                        id: $todos.data[num - 1]["ref"]["@ref"]["id"],
+                        data: $todos.data[num - 1]["data"]["title"],
                     }),
                     headers: {
                         "Content-Type": "application/json",
+                        Authorization: `Bearer ${didToken}`,
                     },
                 });
             } catch (error) {
@@ -24,14 +25,14 @@
                 fetch("/.netlify/functions/delete", {
                     method: "POST",
                     body: JSON.stringify({
-                        id: $todos[num - 1]["ref"]["@ref"]["id"],
-                        data: $todos[num - 1]["data"]["name"],
+                        id: $todos.data[num - 1]["ref"]["@ref"]["id"],
+                        data: $todos.data[num - 1]["data"]["name"],
                     }),
                     headers: {
                         "Content-Type": "application/json",
                     },
                 });
-                $todos = [...$todos.slice(0, num - 1), ...$todos.slice(num)];
+                $todos = [...$todos.data.slice(0, num - 1), ...$todos.data.slice(num)];
             } catch (error) {
                 console.log(error);
             }
