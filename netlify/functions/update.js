@@ -1,14 +1,14 @@
+const { Magic } = require('@magic-sdk/admin');
 const faunadb = require('faunadb')
-const q = faunadb.query
 
 exports.handler = async (event, context) => {
   try {
-    console.log('Function `update` invoked');
     const client = new faunadb.Client({
       secret: process.env.FAUNADB_SERVER_SECRET
     });
     console.log(event.body);
     const object = JSON.parse(event.body);
+    const q = faunadb.query
     await client.query(
       q.Update(
         q.Ref(`classes/todos/${object.id}`), {
