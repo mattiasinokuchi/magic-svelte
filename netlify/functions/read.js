@@ -3,16 +3,16 @@ const faunadb = require('faunadb');
 
 exports.handler = async (event, context) => {
   try {
-    /* validate user's DID token... */
+    /* Validate user's DID token... */
     const magic = new Magic(process.env.MAGIC_SECRET_KEY);
     const didToken = magic.utils.parseAuthorizationHeader(event.headers.authorization);
     magic.token.validate(didToken);
     const { email, issuer } = await magic.users.getMetadataByToken(didToken);
+    /* ...and read user's todos in FaunaDB */
     const adminClient = new faunadb.Client({
       secret: process.env.FAUNADB_SECRET_KEY
     });
     const q = faunadb.query;
-    /* ...and read user's todos from FaunaDB... */
     const todos = await adminClient.query(
       q.Map(
         q.Paginate(
@@ -31,5 +31,9 @@ exports.handler = async (event, context) => {
     }
   } catch (error) {
     console.log(error);
+    return {
+      statusCode: 400,
+      body: JSON.stringify(error)
+    }
   }
 }
