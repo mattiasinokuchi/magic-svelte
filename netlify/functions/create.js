@@ -8,15 +8,15 @@ exports.handler = async (event, context) => {
     const didToken = magic.utils.parseAuthorizationHeader(event.headers.authorization);
     magic.token.validate(didToken);
     const { email, issuer } = await magic.users.getMetadataByToken(didToken);
-    /* ...update user's todo in FaunaDB... */
+    /* ...create user's todo in FaunaDB... */
     const adminClient = new faunadb.Client({
       secret: process.env.FAUNADB_SECRET_KEY
     });
     const q = faunadb.query;
     const todo = JSON.parse(event.body);
     await adminClient.query(
-      q.Update(
-        q.Ref(`classes/todos/${todo.id}`), {
+      q.Create(
+        q.Collection('todos'), {
           data: {
             title: todo.data
           }
