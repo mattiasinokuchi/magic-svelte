@@ -14,11 +14,12 @@
             };
             newTodo = "";
             $todos.data = $todos.data.concat(object);
-            const response = fetch("/.netlify/functions/create", {
+            fetch("/.netlify/functions/create", {
                 method: "POST",
                 body: JSON.stringify({
                     newTodo: object.data.title,
-                    user: object.data.user
+                    user: object.data.user,
+                    completed: object.data.completed
                 }),
                 headers: {
                     "Content-Type": "application/json",
