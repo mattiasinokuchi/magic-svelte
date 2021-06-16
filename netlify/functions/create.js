@@ -14,11 +14,14 @@ exports.handler = async (event, context) => {
     });
     const q = faunadb.query;
     const todo = JSON.parse(event.body);
+    console.log(todo);
     await adminClient.query(
       q.Create(
         q.Collection('todos'), {
           data: {
-            title: todo.data
+            title: todo.title,
+            user: todo.user,
+            completed: todo.completed
           }
         }
       )

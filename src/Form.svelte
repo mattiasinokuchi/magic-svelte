@@ -2,22 +2,22 @@
     import { todos } from "./stores";
     import { user, didToken } from "./stores";
 
-    let newTodo;
+    let title;
     function submit() {
         try {
             const object = {
                 data: {
-                    title: newTodo,
+                    title: title,
                     user: $user,
                     completed: false
                 }
             };
-            newTodo = "";
+            title = "";
             $todos.data = $todos.data.concat(object);
             fetch("/.netlify/functions/create", {
                 method: "POST",
                 body: JSON.stringify({
-                    newTodo: object.data.title,
+                    title: object.data.title,
                     user: object.data.user,
                     completed: object.data.completed
                 }),
@@ -35,7 +35,7 @@
 <form on:submit|preventDefault={submit}>
     <input
         type="text"
-        bind:value={newTodo}
+        bind:value={title}
         name="newTodo"
         placeholder="Type here and..."
         maxlength="35"
