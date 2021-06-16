@@ -7,7 +7,7 @@
         try {
             const object = { data: { title: newTodo } };
             newTodo = "";
-            $todos = $todos.concat(object);
+            $todos.data = $todos.data.concat(object);
             const response = await fetch("/.netlify/functions/create", {
                 method: "POST",
                 body: JSON.stringify({ newTodo: object.data.title }),
@@ -16,7 +16,6 @@
                     Authorization: `Bearer ${$didToken}`,
                 },
             });
-            $todos = await response.json();
         } catch (error) {
             console.log(error);
         }
@@ -36,16 +35,4 @@
 </form>
 
 <style>
-    form {
-        position: fixed;
-        bottom: 20vh;
-        margin-left: 15%;
-        margin-right: 15%;
-        width: 70%;
-    }
-
-    input {
-        font-size: 4vh;
-        border-style: none;
-    }
 </style>

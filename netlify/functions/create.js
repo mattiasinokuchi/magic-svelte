@@ -3,6 +3,7 @@ const faunadb = require('faunadb');
 
 exports.handler = async (event, context) => {
   try {
+    console.log("Create function invoked");
     /* Validate user's DID token... */
     const magic = new Magic(process.env.MAGIC_SECRET_KEY);
     const didToken = magic.utils.parseAuthorizationHeader(event.headers.authorization);
