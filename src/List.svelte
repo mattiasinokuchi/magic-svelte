@@ -1,5 +1,6 @@
 <script>
     import { todos } from "./stores";
+    import { didToken } from "./stores";
 
     const update = (num) =>
         function () {
@@ -12,7 +13,7 @@
                     }),
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Bearer ${didToken}`,
+                        Authorization: `Bearer ${$didToken}`,
                     },
                 });
             } catch (error) {

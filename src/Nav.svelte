@@ -2,6 +2,7 @@
     import { Magic } from "magic-sdk";
     import { onMount } from "svelte";
     import { todos } from "./stores";
+    import { didToken} from "./stores";
   
     let message = "Just a moment...";
     let user;
@@ -20,14 +21,14 @@
     });
   
     async function logIn() {
-      /* Generate token with Magic... */
-      const didToken = await m.auth.loginWithMagicLink({ email: user });
+      /* Generate Magic token... */
+      $didToken = await m.auth.loginWithMagicLink({ email: user });
       /* ...read todos... */
       const response = await fetch("/.netlify/functions/read", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${didToken}`,
+          Authorization: `Bearer ${$didToken}`,
         },
       });
       $todos = await response.json();
