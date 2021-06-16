@@ -1,16 +1,25 @@
 <script>
     import { todos } from "./stores";
-    import { didToken } from "./stores";
+    import { user, didToken } from "./stores";
 
     let newTodo;
-    async function submit() {
+    function submit() {
         try {
-            const object = { data: { title: newTodo } };
+            const object = {
+                data: {
+                    title: newTodo,
+                    user: $user,
+                    completed: false
+                }
+            };
             newTodo = "";
             $todos.data = $todos.data.concat(object);
-            const response = await fetch("/.netlify/functions/create", {
+            const response = fetch("/.netlify/functions/create", {
                 method: "POST",
-                body: JSON.stringify({ newTodo: object.data.title }),
+                body: JSON.stringify({
+                    newTodo: object.data.title,
+                    user: object.data.user
+                }),
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${$didToken}`,
