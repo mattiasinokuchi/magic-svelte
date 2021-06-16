@@ -31,6 +31,7 @@
                     }),
                     headers: {
                         "Content-Type": "application/json",
+                        Authorization: `Bearer ${$didToken}`,
                     },
                 });
                 $todos = [...$todos.data.slice(0, num - 1), ...$todos.data.slice(num)];
