@@ -27,7 +27,6 @@
                     method: "POST",
                     body: JSON.stringify({
                         id: $todos.data[num - 1]["ref"]["@ref"]["id"],
-                        data: $todos.data[num - 1]["data"]["title"],
                     }),
                     headers: {
                         "Content-Type": "application/json",
