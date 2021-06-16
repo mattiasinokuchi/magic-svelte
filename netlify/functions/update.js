@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
     });
     const q = faunadb.query;
     const todo = JSON.parse(event.body);
-    await client.query(
+    await adminClient.query(
       q.Update(
         q.Ref(`classes/todos/${todo.id}`), {
         data: {
