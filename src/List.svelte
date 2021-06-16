@@ -27,14 +27,14 @@
                     method: "POST",
                     body: JSON.stringify({
                         id: $todos.data[num - 1]["ref"]["@ref"]["id"],
-                        data: $todos.data[num - 1]["data"]["name"],
+                        data: $todos.data[num - 1]["data"]["title"],
                     }),
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${$didToken}`,
                     },
                 });
-                $todos = [...$todos.data.slice(0, num - 1), ...$todos.data.slice(num)];
+                $todos.data = [...$todos.data.slice(0, num - 1), ...$todos.data.slice(num)];
             } catch (error) {
                 console.log(error);
             }
