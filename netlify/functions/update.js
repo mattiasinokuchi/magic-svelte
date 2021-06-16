@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
       q.Update(
         q.Ref(`classes/todos/${todo.id}`), {
         data: {
-          name: todo.data
+          title: todo.data
         }
       }
       )
