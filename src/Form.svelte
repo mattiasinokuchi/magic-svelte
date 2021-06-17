@@ -45,4 +45,7 @@
 </form>
 
 <style>
+    input {
+        margin: 2vh;
+    }
 </style>

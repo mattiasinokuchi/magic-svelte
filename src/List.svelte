@@ -55,3 +55,9 @@
         {/each}
     {/if}
 </form>
+
+<style>
+    input {
+        margin: 1vh;
+    }
+</style>
