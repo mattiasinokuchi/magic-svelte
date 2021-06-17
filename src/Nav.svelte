@@ -39,6 +39,7 @@
       message = $user + " logged out";
       $user = null;
       userLoggedIn = false;
+      $todos = null;
     }
   </script>
   
