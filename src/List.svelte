@@ -9,7 +9,8 @@
                     method: "POST",
                     body: JSON.stringify({
                         id: $todos.data[num - 1]["ref"]["@ref"]["id"],
-                        data: $todos.data[num - 1]["data"]["title"],
+                        title: $todos.data[num - 1]["data"]["title"],
+                        completed: $todos.data[num - 1]["data"]["completed"],
                     }),
                     headers: {
                         "Content-Type": "application/json",
@@ -44,13 +45,17 @@
     {#if $todos}
         {#each $todos.data as { data }, i}
             <div id="todo">
-                <button on:click|preventDefault={remove(i + 1)}>🗑</button>
+                <input type="checkbox"
+                    bind:checked={data.completed}
+                    on:change={update(i + 1)}
+                />
                 <input
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     size={data.title.length}
                     maxlength="35"
                 />
+                <button on:click|preventDefault={remove(i + 1)}>🗑</button>
             </div>
         {/each}
     {/if}
