@@ -52,6 +52,7 @@
                 <input
                     bind:value={data.title}
                     on:change={update(i + 1)}
+                    disabled={data.completed}
                     size={data.title.length}
                     maxlength="35"
                 />
