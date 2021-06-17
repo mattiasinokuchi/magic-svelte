@@ -38,11 +38,11 @@
             type="text"
             bind:value={title}
             name="newTodo"
-            placeholder="Type here and..."
+            placeholder="Type another one here and..."
             maxlength="35"
-            size="15"
+            size="35"
         />
-        <input type="submit" value="Add it" />
+        <input type="submit" value="...add it" />
     </form>
 {/if}
 
