@@ -9,8 +9,8 @@
                 data: {
                     title: title,
                     user: $user,
-                    completed: false
-                }
+                    completed: false,
+                },
             };
             title = "";
             $todos.data = $todos.data.concat(object);
@@ -19,7 +19,7 @@
                 body: JSON.stringify({
                     title: object.data.title,
                     user: object.data.user,
-                    completed: object.data.completed
+                    completed: object.data.completed,
                 }),
                 headers: {
                     "Content-Type": "application/json",
@@ -32,17 +32,19 @@
     }
 </script>
 
-<form on:submit|preventDefault={submit}>
-    <input
-        type="text"
-        bind:value={title}
-        name="newTodo"
-        placeholder="Type here and..."
-        maxlength="35"
-        size="15"
-    />
-    <input type="submit" value="Add it" />
-</form>
+{#if $todos}
+    <form on:submit|preventDefault={submit}>
+        <input
+            type="text"
+            bind:value={title}
+            name="newTodo"
+            placeholder="Type here and..."
+            maxlength="35"
+            size="15"
+        />
+        <input type="submit" value="Add it" />
+    </form>
+{/if}
 
 <style>
     input {
