@@ -36,7 +36,7 @@
   
     async function logOut() {
       await m.user.logout();
-      message = $user + " logged out";
+      message = "Welcome to my Magic Link demo!";
       $user = null;
       userLoggedIn = false;
       $todos = null;
