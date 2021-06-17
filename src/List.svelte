@@ -58,6 +58,6 @@
 
 <style>
     input {
-        margin: 1vh;
+        margin: 0.5vh;
     }
 </style>
