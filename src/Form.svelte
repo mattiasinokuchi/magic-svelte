@@ -3,6 +3,7 @@
     import { user, didToken } from "./stores";
 
     let title;
+
     function submit() {
         try {
             const object = {
@@ -38,11 +39,16 @@
             type="text"
             bind:value={title}
             name="newTodo"
-            placeholder="Type here and..."
+            placeholder="Type another one HERE and..."
             maxlength="35"
-            size="15"
+            size="35"
+            autofocus
         />
-        <input type="submit" value="Add it" />
+        <input
+            type="submit"
+            value="...hit this button"
+            disabled={!title}
+        />
     </form>
 {/if}
 
