@@ -1,6 +1,5 @@
 <script>
-    import { todos } from "./stores";
-    import { user, didToken } from "./stores";
+    import { todos, user, didToken } from "./stores";
 
     let title;
     function submit() {
