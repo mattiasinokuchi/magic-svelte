@@ -1,6 +1,5 @@
 <script>
-    import { todos } from "./stores";
-    import { didToken } from "./stores";
+    import { todos, didToken } from "./stores";
 
     const update = (num) =>
         function () {
