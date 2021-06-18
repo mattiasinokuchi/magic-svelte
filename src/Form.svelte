@@ -2,7 +2,7 @@
     import { todos, user, didToken } from "./stores";
 
     let title;
-    function submit() {
+    async function submit() {
         try {
             const object = {
                 data: {
@@ -13,7 +13,7 @@
             };
             title = "";
             $todos.data = $todos.data.concat(object);
-            fetch("/.netlify/functions/create", {
+            const response = await fetch("/.netlify/functions/create", {
                 method: "POST",
                 body: JSON.stringify({
                     title: object.data.title,
@@ -25,6 +25,7 @@
                     Authorization: `Bearer ${$didToken}`,
                 },
             });
+            $todos = await response.json();
         } catch (error) {
             console.log(error);
         }
