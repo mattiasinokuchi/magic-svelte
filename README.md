@@ -1,3 +1,3 @@
 # What is this?
 
-This is a [Svelte](https://svelte.dev/) template with [Serverless Functions](https://docs.netlify.com/functions/overview/) for deployment on [Netlify](https://netlify.com).
+This is a single page demo app written with [Svelte](https://svelte.dev/), [FaunaDB persistent storage](https://fauna.com/), [Magic passwordless authentication](https://magic.link/) for deployment on [Netlify](https://netlify.com).
