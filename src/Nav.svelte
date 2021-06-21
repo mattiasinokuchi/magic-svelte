@@ -56,8 +56,10 @@
   
   <style>
     header {
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
+
     p, button {
       margin: 1vh;
     }
