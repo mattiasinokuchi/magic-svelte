@@ -1,5 +1,5 @@
 body {
     background: linear-gradient(orange, white);
     background-repeat: no-repeat;
-    height: 25vh;
+    background-size: 100vw 25vh;
 }
