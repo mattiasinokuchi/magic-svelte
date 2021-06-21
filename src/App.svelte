@@ -4,6 +4,25 @@
   import Form from "./Form.svelte";
 </script>
 
-<Nav />
-<List />
-<Form />
+<header>
+  <Nav />
+</header>
+<main>
+  <List />
+</main>
+<footer>
+  <Form />
+</footer>
+
+<style>
+  main {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+  }
+
+  footer {
+    position: sticky;
+    margin-bottom: 5vh;
+  }
+</style>
