@@ -62,6 +62,10 @@
 </form>
 
 <style>
+    form {
+        text-align: center;
+    }
+    
     input {
         margin: 0.5vh;
     }
