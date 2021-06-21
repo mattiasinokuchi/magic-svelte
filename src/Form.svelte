@@ -47,6 +47,10 @@
 {/if}
 
 <style>
+    form {
+        text-align: center;
+    }
+
     input {
         margin: 2vh;
     }
