@@ -1,1 +1,5 @@
-
+body {
+    background: linear-gradient(orange, white);
+    background-repeat: no-repeat;
+    height: 25vh;
+}
