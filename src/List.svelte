@@ -52,12 +52,12 @@
                     bind:checked={data.completed}
                     on:change={update(i + 1)}
                 />
-                <input
+                <textarea
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     disabled={data.completed}
-                    size={data.title.length}
-                    maxlength="35"
+                    size=20
+                    maxlength="100"
                 />
                 <button on:click|preventDefault={remove(i + 1)}>🗑</button>
             </div>
@@ -69,6 +69,10 @@
     div {
         display: flex;
         align-items: center;
-        margin-left: 33vw;
+        margin-left: 25vw;
+    }
+
+    input, button {
+        margin: 2vh;
     }
 </style>
