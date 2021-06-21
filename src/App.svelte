@@ -4,6 +4,6 @@
   import Form from "./Form.svelte";
 </script>
 
-<Nav></Nav>
-<List></List>
-<Form></Form>
+<Nav />
+<List />
+<Form />
