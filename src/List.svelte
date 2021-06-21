@@ -33,7 +33,10 @@
                         Authorization: `Bearer ${$didToken}`,
                     },
                 });
-                $todos.data = [...$todos.data.slice(0, num - 1), ...$todos.data.slice(num)];
+                $todos.data = [
+                    ...$todos.data.slice(0, num - 1),
+                    ...$todos.data.slice(num),
+                ];
             } catch (error) {
                 console.log(error);
             }
@@ -44,7 +47,8 @@
     {#if $todos}
         {#each $todos.data as { data }, i}
             <div id="todo">
-                <input type="checkbox"
+                <input
+                    type="checkbox"
                     bind:checked={data.completed}
                     on:change={update(i + 1)}
                 />
@@ -62,11 +66,9 @@
 </form>
 
 <style>
-    form {
-        text-align: center;
-    }
-    
-    input {
-        margin: 0.5vh;
+    div {
+        display: flex;
+        align-items: center;
+        margin-left: 33vw;
     }
 </style>
