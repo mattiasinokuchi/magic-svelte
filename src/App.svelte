@@ -15,14 +15,16 @@
 </footer>
 
 <style>
+  header {
+    height: 10vh;
+  }
+
   main {
-    display: flex;
-    align-items: center;
     height: 80vh;
   }
 
   footer {
-    position: sticky;
-    margin-bottom: 5vh;
+    height: 10vh;
+    position: fixed;
   }
 </style>

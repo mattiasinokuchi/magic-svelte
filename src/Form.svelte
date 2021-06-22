@@ -48,7 +48,9 @@
 
 <style>
     form {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
     }
 
     input {
