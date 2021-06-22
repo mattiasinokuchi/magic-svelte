@@ -76,7 +76,12 @@
         margin: 2vh;
     }
 
-    input, button {
+    textarea,
+    button {
+        font-size: 3vh;
         margin: 2vh;
+        color: orangered;
+        text-shadow: -0.1vh 0.1vh 0.1vh orangered, 0.1vh 0.1vh 0.1vh orangered, 0.1vh -0.1vh 0.1vh orangered,
+            -0.1vh -0.1vh 0.1vh orangered;
     }
 </style>
