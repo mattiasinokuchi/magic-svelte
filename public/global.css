@@ -2,4 +2,5 @@ body {
     background: linear-gradient(orange, white);
     background-repeat: no-repeat;
     background-size: 100vw 25vh;
+    width: 100vw;
 }

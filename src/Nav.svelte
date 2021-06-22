@@ -58,7 +58,6 @@
     header {
       display: flex;
       justify-content: center;
-      width: 100vw;
     }
 
     p, button {
