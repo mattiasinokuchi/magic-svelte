@@ -67,6 +67,7 @@
     background: linear-gradient(to bottom, orangered 50%, white 100%);
     /* Mask the color to the text, and remove the rest  */
     -webkit-background-clip: text;
+    background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
     border-radius: 1vh;
