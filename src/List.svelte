@@ -74,6 +74,7 @@
     div {
         display: flex;
         justify-content: center;
+        margin: 2vh;
     }
 
     input, button {
