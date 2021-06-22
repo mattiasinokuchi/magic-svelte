@@ -68,8 +68,8 @@
 <style>
     div {
         display: flex;
-        align-items: center;
-        margin-left: 25vw;
+        justify-content: center;
+        width: 100vw;
     }
 
     input, button {
