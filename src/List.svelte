@@ -56,7 +56,6 @@
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     disabled={data.completed}
-                    size=20
                     maxlength="100"
                 />
                 <button on:click|preventDefault={remove(i + 1)}>🗑</button>
