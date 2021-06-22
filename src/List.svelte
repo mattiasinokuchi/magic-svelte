@@ -66,6 +66,10 @@
 </form>
 
 <style>
+    form {
+        height: 70vh;
+    }
+
     div {
         display: flex;
         justify-content: center;

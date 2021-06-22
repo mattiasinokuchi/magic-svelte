@@ -16,15 +16,11 @@
 
 <style>
   header {
-    height: 10vh;
   }
 
   main {
-    height: 80vh;
   }
 
   footer {
-    height: 10vh;
-    position: fixed;
   }
 </style>

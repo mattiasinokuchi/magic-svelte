@@ -51,6 +51,8 @@
         display: flex;
         justify-content: center;
         width: 100vw;
+        height: 10vh;
+        position: fixed;
     }
 
     input {
