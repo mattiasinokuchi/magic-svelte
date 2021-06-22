@@ -68,12 +68,12 @@
 <style>
     form {
         height: 70vh;
+        width: 100vw;
     }
 
     div {
         display: flex;
         justify-content: center;
-        width: 100vw;
     }
 
     input, button {
