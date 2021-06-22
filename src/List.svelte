@@ -66,8 +66,9 @@
 
 <style>
     form {
-        height: 70vh;
+        height: 50vh;
         width: 100vw;
+        margin-top: 20vh;
     }
 
     div {
