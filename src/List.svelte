@@ -79,9 +79,15 @@
     textarea,
     button {
         font-size: 3vh;
-        margin: 2vh;
-        color: orangered;
-        text-shadow: -0.1vh 0.1vh 0.1vh orangered, 0.1vh 0.1vh 0.1vh orangered, 0.1vh -0.1vh 0.1vh orangered,
-            -0.1vh -0.1vh 0.1vh orangered;
+        margin: 1vh;
+        /* Set the background color */
+        background: linear-gradient(to bottom, orangered 50%, white 100%);
+        /* Mask the color to the text, and remove the rest  */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Make the text fill color value transparent so the masked background color comes through */
+        -webkit-text-fill-color: transparent;
+        border-radius: 1vh;
+        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
     }
 </style>
