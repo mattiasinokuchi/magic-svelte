@@ -76,7 +76,7 @@
   }
 
   button {
-    border: 1px solid orangered;
-    border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+    border: 1px solid orange;
+    border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
   }
 </style>
