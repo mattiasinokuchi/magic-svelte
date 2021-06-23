@@ -62,6 +62,7 @@
 
   p,
   button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3vh;
     margin: 1vh;
     /* Set the background color */

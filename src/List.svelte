@@ -79,6 +79,7 @@
     textarea,
     button {
         font-size: 3vh;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         margin: 1vh;
         /* Set the background color */
         background: linear-gradient(to bottom, orangered 50%, white 100%);
