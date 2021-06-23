@@ -73,4 +73,9 @@
     -webkit-text-fill-color: transparent;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
+
+  button {
+    border: 1px solid orangered;
+    border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+  }
 </style>
