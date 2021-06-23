@@ -88,15 +88,15 @@
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border: 1px solid orangered;
-        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+        border: 1px solid orange;
+        border-image: linear-gradient(to bottom, orange 50%, white 100%) 1;
     }
 
     input[type=checkbox] {
         appearance: none;
-        border: 1px solid orangered;
+        border: 1px solid orange;
         padding: 9px;
-        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+        border-image: linear-gradient(to bottom, orange 50%, white 100%) 1;
     }
 
     input:checked {
@@ -104,7 +104,7 @@
         background: linear-gradient(to bottom, orangered 50%, white 100%);
     }
 
-    textarea:disabled {
+    input:disabled {
         text-decoration: line-through;
         /* Set the background color */
         background: linear-gradient(to bottom, orange 0%, white 100%);
