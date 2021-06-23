@@ -44,7 +44,7 @@
 </script>
 
 <header>
-  <h1>{message}</h1>
+  <p>{message}</p>
   {#if !userLoggedIn && message !== "Just a moment..."}
     <input type="email" bind:value={$user} placeholder="hello@magic.link" />
     <button on:click={logIn}>Log in</button>
@@ -60,8 +60,9 @@
     justify-content: center;
   }
 
-  h1,
+  p,
   button {
+    font-size: 3vh;
     margin: 1vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 50%, white 100%);
