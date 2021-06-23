@@ -38,11 +38,11 @@
             type="text"
             bind:value={title}
             name="newTodo"
-            placeholder="Type here and..."
+            placeholder="Type here..."
             maxlength="35"
             size="20"
         />
-        <input type="submit" value="...add it" />
+        <input type="submit" value="Add" />
     </form>
 {/if}
 
@@ -60,13 +60,12 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         margin: 1vh;
         /* Set the background color */
-        background: linear-gradient(to bottom, orangered 50%, white 100%);
+        background: orange;
         /* Mask the color to the text, and remove the rest  */
         -webkit-background-clip: text;
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border: 1px solid orangered;
-        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+        border: 1px solid yellow;
     }
 </style>
