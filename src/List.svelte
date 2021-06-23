@@ -73,7 +73,7 @@
     div {
         display: flex;
         justify-content: center;
-        margin: 2vh;
+        align-items: center;
     }
 
     textarea,
