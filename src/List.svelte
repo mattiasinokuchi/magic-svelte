@@ -52,7 +52,7 @@
                     bind:checked={data.completed}
                     on:change={update(i + 1)}
                 />
-                <textarea
+                <input
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     disabled={data.completed}
@@ -76,7 +76,7 @@
         align-items: center;
     }
 
-    textarea,
+    input,
     button {
         font-size: 3vh;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -92,7 +92,7 @@
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
     }
 
-    input {
+    input[type=checkbox] {
         appearance: none;
         border: 1px solid orangered;
         padding: 9px;
