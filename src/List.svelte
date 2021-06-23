@@ -87,7 +87,30 @@
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border-radius: 1vh;
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+    }
+
+    input {
+        appearance: none;
+        border: 1px solid orangered;
+        padding: 9px;
+        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+    }
+
+    input:checked {
+        border: none;
+        background: linear-gradient(to bottom, orangered 50%, white 100%);
+    }
+
+    textarea:disabled {
+        text-decoration: line-through;
+        /* Set the background color */
+        background: linear-gradient(to bottom, orange 0%, white 100%);
+        /* Mask the color to the text, and remove the rest  */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Make the text fill color value transparent so the masked background color comes through */
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
     }
 </style>

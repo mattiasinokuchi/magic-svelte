@@ -71,7 +71,6 @@
     background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
-    border-radius: 1vh;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
 </style>
