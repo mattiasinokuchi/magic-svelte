@@ -14,7 +14,7 @@
       logIn();
     } catch {
       userLoggedIn = false;
-      message = "Welcome to my Magic Link demo!";
+      message = "Welcome!";
     }
   });
 
@@ -36,7 +36,7 @@
 
   async function logOut() {
     await m.user.logout();
-    message = "Welcome to my Magic Link demo!";
+    message = "Welcome!";
     $user = null;
     userLoggedIn = false;
     $todos = null;
@@ -44,9 +44,9 @@
 </script>
 
 <header>
-  <p>{message}</p>
+  <h1>{message}</h1>
   {#if !userLoggedIn && message !== "Just a moment..."}
-    <input type="email" bind:value={$user} placeholder="hello@magic.link" />
+    <input type="email" bind:value={$user} placeholder="hello@magic.link" size=15/>
     <button on:click={logIn}>Log in</button>
   {/if}
   {#if userLoggedIn}
@@ -57,13 +57,14 @@
 <style>
   header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
-  p,
+  h1,
+  input,
   button {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 3vh;
     margin: 1vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 50%, white 100%);
@@ -75,7 +76,8 @@
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
 
-  button {
+  input, button {
+    font-size: 3vh;
     border: 1px solid orange;
     border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
   }
