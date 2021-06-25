@@ -53,5 +53,6 @@
         font-size: 3vh;
         border: 1px solid orange;
         border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
+        height: 5vh;
     }
 </style>
