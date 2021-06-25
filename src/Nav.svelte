@@ -2,6 +2,7 @@
   import { Magic } from "magic-sdk";
   import { onMount } from "svelte";
   import { todos, didToken, user } from "./stores";
+  import Form from "./Form.svelte";
 
   let message = "Just a moment...";
   let userLoggedIn;
@@ -55,6 +56,7 @@
     <button on:click={logIn}>Log in</button>
   {/if}
   {#if userLoggedIn}
+    <Form />
     <button on:click={logOut}>Log out</button>
   {/if}
 </header>

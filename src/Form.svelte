@@ -39,20 +39,19 @@
 {/if}
 
 <style>
-    form {
-        display: flex;
-        justify-content: center;
-        width: 100vw;
-        position: fixed;
-    }
-
     input {
-        margin: 3vh;
-        font-size: 3vh;
-        color: orange;
-        background-color: white;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         margin: 1vh;
+        /* Set the background color */
+        background: linear-gradient(to bottom, orangered 0%, white 100%);
+        /* Mask the color to the text, and remove the rest  */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Make the text fill color value transparent so the masked background color comes through */
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(to bottom, orangered 0%, white 100%) 1;
+        font-size: 3vh;
         border: 1px solid orange;
+        border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
     }
 </style>
