@@ -31,7 +31,7 @@
       },
     });
     $todos = await response.json();
-    message = "Logged in as " + $user;
+    message = "Todo for " + $user;
     userLoggedIn = true;
   }
 
