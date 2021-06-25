@@ -34,15 +34,7 @@
 
 {#if $todos}
     <form on:submit|preventDefault={submit}>
-        <input
-            type="text"
-            bind:value={title}
-            name="newTodo"
-            placeholder="Type here..."
-            maxlength="35"
-            size="20"
-        />
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add another" />
     </form>
 {/if}
 
