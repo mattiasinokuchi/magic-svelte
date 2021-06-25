@@ -85,28 +85,28 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         margin: 1vh;
         /* Set the background color */
-        background: orangered 50%;
+        background: orange 50%;
         /* Mask the color to the text, and remove the rest  */
         -webkit-background-clip: text;
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border: 1px solid orangered;
+        border: 1px solid orange;
     }
 
     input[type=checkbox] {
         appearance: none;
-        border: 1px solid orangered;
+        border: 1px solid orange;
         padding: 9px;
-        border-image: orangered;
+        border-image: orange;
     }
 
     input:checked {
         border: none;
-        background: orangered;
+        background: orange;
     }
 
     input:disabled {
-        text-decoration: line-through orangered;
+        text-decoration: line-through orange;
     }
 </style>
