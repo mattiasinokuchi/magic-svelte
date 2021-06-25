@@ -85,37 +85,28 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         margin: 1vh;
         /* Set the background color */
-        background: linear-gradient(to bottom, orangered 50%, white 100%);
+        background: orangered 50%;
         /* Mask the color to the text, and remove the rest  */
         -webkit-background-clip: text;
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border: 1px solid orange;
-        border-image: linear-gradient(to bottom, orange 50%, white 100%) 1;
+        border: 1px solid orangered;
     }
 
     input[type=checkbox] {
         appearance: none;
-        border: 1px solid orange;
+        border: 1px solid orangered;
         padding: 9px;
-        border-image: linear-gradient(to bottom, orange 50%, white 100%) 1;
+        border-image: orangered;
     }
 
     input:checked {
         border: none;
-        background: linear-gradient(to bottom, orangered 50%, white 100%);
+        background: orangered;
     }
 
     input:disabled {
         text-decoration: line-through orangered;
-        /* Set the background color */
-        background: linear-gradient(to bottom, orange 50%, white 100%);
-        /* Mask the color to the text, and remove the rest  */
-        -webkit-background-clip: text;
-        background-clip: text;
-        /* Make the text fill color value transparent so the masked background color comes through */
-        -webkit-text-fill-color: transparent;
-        border: none;
     }
 </style>
