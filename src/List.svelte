@@ -105,14 +105,14 @@
     }
 
     input:disabled {
-        text-decoration: line-through;
+        text-decoration: line-through orangered;
         /* Set the background color */
-        background: linear-gradient(to bottom, orange 0%, white 100%);
+        background: linear-gradient(to bottom, orange 50%, white 100%);
         /* Mask the color to the text, and remove the rest  */
         -webkit-background-clip: text;
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border-image: linear-gradient(to bottom, yellow 0%, white 100%) 1;
+        border: none;
     }
 </style>
