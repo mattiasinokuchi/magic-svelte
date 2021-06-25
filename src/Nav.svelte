@@ -46,7 +46,12 @@
 <header>
   <h1>{message}</h1>
   {#if !userLoggedIn && message !== "Just a moment..."}
-    <input type="email" bind:value={$user} placeholder="hello@magic.link" size=15/>
+    <input
+      type="email"
+      bind:value={$user}
+      placeholder="hello@magic.link"
+      size="15"
+    />
     <button on:click={logIn}>Log in</button>
   {/if}
   {#if userLoggedIn}
@@ -59,12 +64,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   h1,
   input,
   button {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     margin: 1vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 50%, white 100%);
@@ -76,7 +85,8 @@
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
 
-  input, button {
+  input,
+  button {
     font-size: 3vh;
     border: 1px solid orange;
     border-image: linear-gradient(to bottom, orange 0%, white 100%) 1;
