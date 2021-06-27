@@ -49,17 +49,23 @@
 <style>
     form {
         display: flex;
-        flex-wrap: wrap;
+        align-items: flex-end;
         justify-content: center;
         position: fixed;
-        bottom: 10vh;
+        height: 40vh;
+        bottom: 0;
         left: 0;
         right: 0;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 1) 100%
+        );
+        background-repeat: no-repeat;
     }
 
     input {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        margin: 1vh;
         /* Set the background color */
         background: linear-gradient(to bottom, orangered 50%, white 100%);
         /* Mask the color to the text, and remove the rest  */
@@ -72,5 +78,6 @@
         border: 1px solid orangered;
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
         height: 5vh;
+        margin: 10vh;
     }
 </style>
