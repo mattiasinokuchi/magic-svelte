@@ -65,10 +65,16 @@
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
+    height: 30vh;
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(orange 0%, rgb(255, 255, 200, 1) 80%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+      orange 0%,
+      rgb(255, 255, 200, 1) 50%,
+      rgb(255, 255, 255, 1) 75%,
+      rgba(255, 255, 255, 0) 100%
+    );
     background-repeat: no-repeat;
   }
 
