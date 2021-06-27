@@ -1,9 +1,9 @@
 <script>
   import Nav from "./Nav.svelte";
   import List from "./List.svelte";
-  import AddButton from "./AddButton.svelte";
+  import Button from "./Button.svelte";
 </script>
 
 <Nav />
 <List />
-<AddButton />
+<Button />
