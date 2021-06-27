@@ -39,6 +39,16 @@
 {/if}
 
 <style>
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: fixed;
+        bottom: 10vh;
+        left: 0;
+        right: 0;
+    }
+
     input {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         margin: 1vh;
