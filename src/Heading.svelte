@@ -68,7 +68,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(orange 20%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(orange 0%, 95%, rgba(255, 255, 255, 0) 100%);
     background-repeat: no-repeat;
     height: 20vh;
   }
