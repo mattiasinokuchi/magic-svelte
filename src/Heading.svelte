@@ -65,16 +65,19 @@
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
-    top: 5vh;
+    top: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(orange 20%, white 100%);
+    background-repeat: no-repeat;
+    height: 20vh;
   }
 
   h1,
   input,
   button {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    margin: 1vh;
+    margin: 5vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 50%, white 100%);
     /* Mask the color to the text, and remove the rest  */
