@@ -82,19 +82,20 @@
     input,
     button {
         font-size: 3vh;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: 1px solid orangered;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         margin: 1vh;
         /* Set the background color */
-        background: orangered 50%;
+        background: linear-gradient(to bottom, orangered 50%, white 100%);
         /* Mask the color to the text, and remove the rest  */
         -webkit-background-clip: text;
         background-clip: text;
         /* Make the text fill color value transparent so the masked background color comes through */
         -webkit-text-fill-color: transparent;
-        border: 1px solid orangered;
+        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
     }
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
         appearance: none;
         border: 1px solid orangered;
         padding: 9px;
