@@ -65,7 +65,7 @@
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
-    top: 0;
+    top: 5vh;
     left: 0;
     right: 0;
   }
