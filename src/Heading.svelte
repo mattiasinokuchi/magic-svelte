@@ -46,13 +46,15 @@
 <header>
   <h1>{message}</h1>
   {#if !userLoggedIn && message !== "Just a moment..."}
-    <input
-      type="email"
-      bind:value={$user}
-      placeholder="hello@magic.link"
-      size="15"
-    />
-    <button on:click={logIn}>Log in</button>
+    <form on:submit|preventDefault={logIn}>
+      <input
+        type="email"
+        bind:value={$user}
+        placeholder="hello@magic.link"
+        size="15"
+      />
+      <input type="submit" value="Log in" on:click />
+    </form>
   {/if}
   {#if userLoggedIn}
     <button on:click={logOut}>Log out</button>
@@ -82,7 +84,7 @@
   input,
   button {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    margin: 5vh;
+    margin: 1vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 25%, white 100%);
     /* Mask the color to the text, and remove the rest  */
@@ -91,6 +93,7 @@
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
     border-image: linear-gradient(to bottom, orangered 25%, white 100%) 1;
+    margin-top: 5vh;
   }
 
   input,
