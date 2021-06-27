@@ -68,9 +68,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(orange 0%, 95%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(orange 0%, rgb(255, 255, 200, 1) 80%, rgba(255, 255, 255, 0) 100%);
     background-repeat: no-repeat;
-    height: 20vh;
   }
 
   h1,
@@ -79,13 +78,13 @@
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     margin: 5vh;
     /* Set the background color */
-    background: linear-gradient(to bottom, orangered 50%, white 100%);
+    background: linear-gradient(to bottom, orangered 25%, white 100%);
     /* Mask the color to the text, and remove the rest  */
     -webkit-background-clip: text;
     background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
-    border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+    border-image: linear-gradient(to bottom, orangered 25%, white 100%) 1;
   }
 
   input,
