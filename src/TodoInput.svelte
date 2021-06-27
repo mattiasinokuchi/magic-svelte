@@ -52,7 +52,7 @@
         align-items: flex-end;
         justify-content: center;
         position: fixed;
-        height: 30vh;
+        height: 20vh;
         bottom: 0;
         left: 0;
         right: 0;
@@ -78,6 +78,6 @@
         border: 1px solid orangered;
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
         height: 5vh;
-        margin: 10vh;
+        margin: 5vh;
     }
 </style>
