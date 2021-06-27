@@ -52,13 +52,11 @@
                     bind:checked={data.completed}
                     on:change={update(i + 1)}
                 />
-                <!-- svelte-ignore a11y-autofocus -->
                 <input
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     disabled={data.completed}
                     maxlength="100"
-                    autofocus
                 />
                 <button on:click|preventDefault={remove(i + 1)}>🗑</button>
             </div>
