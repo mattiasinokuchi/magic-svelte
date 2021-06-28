@@ -14,7 +14,7 @@
       logIn();
     } catch {
       userLoggedIn = false;
-      message = "Welcome!";
+      message = "List it!";
     }
   });
 
