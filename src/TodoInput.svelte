@@ -61,7 +61,6 @@
             rgb(255, 255, 255, 1) 25%,
             rgba(255, 255, 255, 1) 100%
         );
-        background-repeat: no-repeat;
     }
 
     input {
@@ -77,7 +76,6 @@
         font-size: 3vh;
         border: 1px solid orangered;
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
-        height: 5vh;
         margin: 1vh;
         margin-bottom: 5vh;
     }
