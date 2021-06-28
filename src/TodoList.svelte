@@ -96,15 +96,23 @@
         appearance: none;
         border: 1px solid orangered;
         padding: 9px;
-        border-image: orangered;
+        border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
     }
 
     input:checked {
         border: none;
-        background: orangered;
+        background: linear-gradient(to bottom, orangered 0%, white 100%);
     }
 
     input:disabled {
-        text-decoration: line-through orangered;
+        text-decoration: line-through orange;
+        /* Set the background color */
+        background: linear-gradient(to bottom, orange 50%, white 100%);
+        /* Mask the color to the text, and remove the rest  */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Make the text fill color value transparent so the masked background color comes through */
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(to bottom, orange 50%, white 100%) 1;
     }
 </style>
