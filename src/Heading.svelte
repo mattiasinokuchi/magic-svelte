@@ -107,6 +107,7 @@
   h1,
   input,
   button {
+    appearance: none;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     margin: 1vh;
     /* Set the background color */
@@ -123,6 +124,7 @@
 
   input,
   button {
+    appearance: none;
     font-size: 3vh;
     border: 1px solid orangered;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
