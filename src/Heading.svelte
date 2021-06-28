@@ -107,7 +107,7 @@
   h1,
   input,
   button {
-    appearance: none;
+    -webkit-appearance: none;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     margin: 1vh;
     /* Set the background color */
@@ -117,14 +117,13 @@
     background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
-    border-image: linear-gradient(to bottom, orangered 0%, white 100%) 1;
     margin-top: 5vh;
     height: 5vh;
   }
 
   input,
   button {
-    appearance: none;
+    -webkit-appearance: none;
     font-size: 3vh;
     border: 1px solid orangered;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
