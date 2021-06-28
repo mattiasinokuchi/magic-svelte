@@ -101,7 +101,6 @@
       rgb(255, 255, 255, 1) 75%,
       rgba(255, 255, 255, 0) 100%
     );
-    background-repeat: no-repeat;
   }
 
   h1,
@@ -111,6 +110,7 @@
     -moz-appearance: none;
     appearance: none;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: orangered;
     margin: 1vh;
     /* Set the background color */
     background: linear-gradient(to bottom, orangered 0%, white 100%);
