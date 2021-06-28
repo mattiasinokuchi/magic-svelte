@@ -38,8 +38,8 @@
             type="text"
             bind:value={title}
             name="newTodo"
-            placeholder="Type here..."
-            maxlength="35"
+            placeholder="An idea...the name of a song..."
+                maxlength="35"
             size="20"
         />
         <input type="submit" value="Add" />
