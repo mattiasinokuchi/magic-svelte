@@ -30,7 +30,7 @@
       },
     });
     $todos = await response.json();
-    message = "Todo for " + $user;
+    message = $user;
     userLoggedIn = true;
   }
 
@@ -64,7 +64,7 @@
 <style>
   header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     position: fixed;
     height: 20vh;
@@ -89,6 +89,7 @@
     background: linear-gradient(to bottom, orangered 0%, white 100%);
     /* Mask the color to the text, and remove the rest  */
     -webkit-background-clip: text;
+    background-clip: text;
     /* Make the text fill color value transparent so the masked background color comes through */
     -webkit-text-fill-color: transparent;
     border-image: linear-gradient(to bottom, orangered 0%, white 100%) 1;
@@ -101,5 +102,10 @@
     font-size: 3vh;
     border: 1px solid orangered;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
+  }
+
+  h1 {
+    font-size: 4vh;
+    max-width: 60vw;
   }
 </style>
