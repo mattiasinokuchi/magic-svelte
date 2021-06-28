@@ -32,13 +32,13 @@
     }
 </script>
 
-{#if $todos}
+{#if $user}
     <form on:submit|preventDefault={submit}>
         <input
             type="text"
             bind:value={title}
             name="newTodo"
-            placeholder="An idea...the name of a song..."
+            placeholder="A thing..."
                 maxlength="35"
             size="20"
         />

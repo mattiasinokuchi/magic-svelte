@@ -15,6 +15,30 @@
     } catch {
       userLoggedIn = false;
       message = "List it!";
+      $todos = {
+        data: [
+          {
+            data: {
+              title: "Log in with your email",
+            },
+          },
+          {
+            data: {
+              title: "List meaningful things",
+            },
+          },
+          {
+            data: {
+              title: "Do what you need to do",
+            },
+          },
+          {
+            data: {
+              title: "Celerate!",
+            },
+          },
+        ],
+      };
     }
   });
 
