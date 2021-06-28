@@ -34,7 +34,7 @@
           },
           {
             data: {
-              title: "Celerate!",
+              title: "Celebrate!",
             },
           },
         ],
