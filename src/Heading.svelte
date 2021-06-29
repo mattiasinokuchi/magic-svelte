@@ -125,6 +125,7 @@
   button {
     appearance: none;
     font-size: 3vh;
+    color: orangered;
     border: 1px solid orangered;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
