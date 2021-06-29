@@ -106,8 +106,6 @@
   h1,
   input,
   button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     color: orangered;
@@ -125,8 +123,6 @@
 
   input,
   button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     font-size: 3vh;
     border: 1px solid orangered;
