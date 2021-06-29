@@ -1,7 +1,7 @@
 <script>
   import { Magic } from "magic-sdk";
   import { onMount } from "svelte";
-  import { todos, didToken, user } from "./stores";
+  import { todos, didToken, user, introList } from "./stores";
 
   let message = "Just a moment...";
   let userLoggedIn;
@@ -15,30 +15,7 @@
     } catch {
       userLoggedIn = false;
       message = "List it!";
-      $todos = {
-        data: [
-          {
-            data: {
-              title: "Log in with your email",
-            },
-          },
-          {
-            data: {
-              title: "List meaningful things",
-            },
-          },
-          {
-            data: {
-              title: "Do what you need to do",
-            },
-          },
-          {
-            data: {
-              title: "Celebrate!",
-            },
-          },
-        ],
-      };
+      $todos = $introList
     }
   });
 
@@ -64,30 +41,7 @@
     $user = null;
     userLoggedIn = false;
     message = "List it!";
-    $todos = {
-      data: [
-        {
-          data: {
-            title: "Log in with your email",
-          },
-        },
-        {
-          data: {
-            title: "List meaningful things",
-          },
-        },
-        {
-          data: {
-            title: "Do what you need to do",
-          },
-        },
-        {
-          data: {
-            title: "Celebrate!",
-          },
-        },
-      ],
-    };
+    $todos = $introList;
   }
 </script>
 
