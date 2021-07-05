@@ -15,7 +15,7 @@
     } catch {
       userLoggedIn = false;
       message = "List it!";
-      $todos = $introList
+      $todos = $introList;
     }
   });
 
