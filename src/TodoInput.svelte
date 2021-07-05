@@ -78,5 +78,6 @@
         border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
         margin: 1vh;
         margin-bottom: 5vh;
+        max-width: 70vw;
     }
 </style>
