@@ -80,6 +80,7 @@
     input,
     button {
         font-size: 3vh;
+        max-width: 70vw;
         border: 1px solid orangered;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         margin: 1vh;
