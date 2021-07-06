@@ -56,6 +56,7 @@
                     bind:value={data.title}
                     on:change={update(i + 1)}
                     disabled={data.completed}
+                    size="25"
                     maxlength="100"
                 />
                 <button on:click|preventDefault={remove(i + 1)}>×</button>
@@ -79,10 +80,10 @@
 
     input,
     button {
-        font-size: 3vh;
+        font-size: 2vh;
         max-width: 70vw;
         border: 1px solid orangered;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-family: monospace;
         margin: 1vh;
         /* Set the background color */
         background: linear-gradient(to bottom, orangered 50%, white 100%);

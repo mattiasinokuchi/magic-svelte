@@ -52,7 +52,7 @@
         type="email"
         bind:value={$user}
         placeholder="hello@magic.link"
-        size="15"
+        size="20"
       />
       <input type="submit" value="Log in" on:click />
     </form>
@@ -84,7 +84,7 @@
   input,
   button {
     appearance: none;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: monospace;
     color: orangered;
     margin: 1vh;
     /* Set the background color */
@@ -101,13 +101,13 @@
   input,
   button {
     appearance: none;
-    font-size: 3vh;
+    font-size: 2vh;
     color: orangered;
     border: 1px solid orangered;
     border-image: linear-gradient(to bottom, orangered 50%, white 100%) 1;
   }
 
   h1 {
-    font-size: 4vh;
+    font-size: 3vh;
   }
 </style>
