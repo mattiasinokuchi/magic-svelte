@@ -37,7 +37,6 @@
 
   async function logOut() {
     await m.user.logout();
-    message = "Welcome!";
     $user = null;
     userLoggedIn = false;
     message = "List it!";
