@@ -66,7 +66,7 @@
 <style>
   header {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     position: fixed;
     height: 20vh;
