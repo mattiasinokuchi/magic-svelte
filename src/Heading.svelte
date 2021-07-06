@@ -109,6 +109,5 @@
 
   h1 {
     font-size: 4vh;
-    max-width: 60vw;
   }
 </style>
