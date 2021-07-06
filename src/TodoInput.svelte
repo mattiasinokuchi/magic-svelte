@@ -40,7 +40,7 @@
             name="newTodo"
             placeholder="A thing..."
                 maxlength="35"
-            size="20"
+            size="30"
         />
         <input type="submit" value="Add" />
     </form>
