@@ -58,7 +58,7 @@
                     disabled={data.completed}
                     maxlength="100"
                 />
-                <button on:click|preventDefault={remove(i + 1)}>🗑</button>
+                <button on:click|preventDefault={remove(i + 1)}>×</button>
             </div>
         {/each}
     {/if}
