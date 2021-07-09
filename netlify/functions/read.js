@@ -1,7 +1,7 @@
-import { Magic } from '@magic-sdk/admin';
-import { Client, query } from 'faunadb';
+const { Magic } = require('@magic-sdk/admin');
+const faunadb = require('faunadb');
 
-export async function handler(event, context) {
+exports.handler = async (event, context) => {
   try {
     /* Validate user's DID token... */
     const magic = new Magic(process.env.MAGIC_SECRET_KEY);
@@ -9,10 +9,10 @@ export async function handler(event, context) {
     magic.token.validate(didToken);
     const { email, issuer } = await magic.users.getMetadataByToken(didToken);
     /* ...and read user's todos in FaunaDB */
-    const adminClient = new Client({
+    const adminClient = new faunadb.Client({
       secret: process.env.FAUNADB_SECRET_KEY
     });
-    const q = query;
+    const q = faunadb.query;
     const todos = await adminClient.query(
       q.Map(
         q.Paginate(
