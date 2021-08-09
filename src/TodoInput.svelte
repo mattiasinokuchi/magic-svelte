@@ -39,7 +39,7 @@
             bind:value={title}
             name="newTodo"
             placeholder="A thing..."
-                maxlength="35"
+            maxlength="35"
             size="30"
         />
         <input type="submit" value="Add" />
@@ -64,7 +64,7 @@
     }
 
     input {
-        font-family: monospace;
+        font-family: system-ui;
         /* Set the background color */
         background: linear-gradient(to bottom, orangered 50%, white 100%);
         /* Mask the color to the text, and remove the rest  */
