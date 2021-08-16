@@ -84,7 +84,7 @@
   input,
   button {
     appearance: none;
-    font-family: monospace;
+    font-family: system-ui;
     color: orangered;
     margin: 1vh;
     /* Set the background color */
