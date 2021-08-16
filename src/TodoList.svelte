@@ -83,7 +83,7 @@
         font-size: 2vh;
         max-width: 70vw;
         border: 1px solid orangered;
-        font-family: system-ui;
+        font-family: monospace;
         margin: 1vh;
         /* Set the background color */
         background: linear-gradient(to bottom, orangered 50%, white 100%);
