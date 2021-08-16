@@ -1,4 +1,5 @@
 {
+  "comment": "this file keeps track of dependencies",
   "name": "svelte-app",
   "private": true,
   "scripts": {
