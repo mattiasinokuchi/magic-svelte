@@ -1,3 +1,5 @@
+# Tells git which files or folder to ignore
+
 /node_modules/
 /public/build/
 .DS_Store

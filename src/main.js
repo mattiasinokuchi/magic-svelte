@@ -1,3 +1,5 @@
+// This the entry point to the app
+
 import App from './App.svelte';
 
 const app = new App({
