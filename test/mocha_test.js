@@ -9,7 +9,7 @@ let webdriver = require('selenium-webdriver'),
 describe('Heading', () => {
   it('should have the correct text content - Just a moment...', async function () {
     let driver = new webdriver.Builder()
-      .withCapabilities(webdriver.Capabilities.firefox())
+      .withCapabilities(webdriver.Capabilities.chrome())
       .build();
     await driver.get('http://localhost:8888/');
     const header = await driver.findElement(By.css('h1'));
