@@ -1,3 +1,5 @@
+// Tells rollup how to compile and build the app
+
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
