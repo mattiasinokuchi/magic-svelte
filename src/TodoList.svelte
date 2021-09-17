@@ -57,7 +57,7 @@
                     on:change={update(i + 1)}
                     disabled={data.completed}
                     size="25"
-                    maxlength="100"
+                    maxlength="25"
                 />
                 <button on:click|preventDefault={remove(i + 1)}>×</button>
             </div>
